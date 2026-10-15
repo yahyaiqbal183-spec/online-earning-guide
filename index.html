@@ -1,56 +1,252 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Earning Guide</title>
+<meta name="description" content="Learn digital skills, freelancing, Canva design and safe ways to start earning online.">
+<title>Online Earning Guide | Learn, Create, Grow</title>
 <style>
-body{margin:0;font-family:Arial,sans-serif;background:#f3f6fb;color:#222}
-header{background:#123c69;color:white;text-align:center;padding:30px 15px}
-header h1{margin:0;font-size:30px}
-nav{background:#09294a;padding:14px;text-align:center}
-nav a{color:white;text-decoration:none;margin:10px;font-weight:bold}
-main{max-width:850px;margin:20px auto;padding:15px}
-.card{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 2px 8px #ddd}
-.card h2{color:#123c69}
-footer{background:#123c69;color:white;text-align:center;padding:18px}
+:root {
+  --navy: #102b4e;
+  --blue: #2563eb;
+  --light: #f4f7fc;
+  --text: #243247;
+  --muted: #64748b;
+  --white: #ffffff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+a { text-decoration: none; }
+.topbar {
+  background: var(--white);
+  padding: 15px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 2px 12px #102b4e0d;
+}
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--navy);
+}
+.logo span { color: var(--blue); }
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+nav a { color: var(--text); font-size: 14px; font-weight: 700; }
+nav a:hover { color: var(--blue); }
+.hero {
+  padding: 75px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(135deg, #102b4e, #2459a6);
+}
+.tag {
+  display: inline-block;
+  border: 1px solid #ffffff70;
+  border-radius: 30px;
+  padding: 5px 13px;
+  font-size: 13px;
+}
+.hero h1 {
+  max-width: 750px;
+  margin: 18px auto;
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.2;
+}
+.hero p {
+  max-width: 620px;
+  margin: 0 auto 25px;
+  color: #e4edff;
+  font-size: 17px;
+}
+.btn {
+  display: inline-block;
+  background: #ffffff;
+  color: var(--navy);
+  padding: 12px 20px;
+  border-radius: 9px;
+  font-weight: 700;
+  margin: 5px;
+}
+.btn.primary { background: #8fc5ff; color: #102b4e; }
+.container { width: 90%; max-width: 1100px; margin: 45px auto; }
+.section-title { text-align: center; margin-bottom: 25px; }
+.section-title h2 { color: var(--navy); margin-bottom: 5px; font-size: 29px; }
+.section-title p { color: var(--muted); margin-top: 0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #e6edf6;
+  box-shadow: 0 6px 22px #102b4e09;
+}
+.card .emoji { font-size: 34px; }
+.card h3 { color: var(--navy); margin: 10px 0; font-size: 20px; }
+.card p { color: var(--muted); font-size: 15px; }
+.card a { color: var(--blue); font-weight: 700; }
+.welcome {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  border-left: 5px solid var(--blue);
+}
+.welcome h2 { margin-top: 0; color: var(--navy); }
+.steps { counter-reset: step; }
+.step { margin: 15px 0; }
+.notice {
+  background: #eaf2ff;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid #d3e3ff;
+}
+.notice h2 { color: var(--navy); margin-top: 0; }
+footer {
+  background: var(--navy);
+  color: white;
+  text-align: center;
+  padding: 32px 15px;
+  margin-top: 55px;
+}
+footer p { margin: 5px; color: #d7e4f8; }
+footer a { color: white; text-decoration: underline; }
+@media (max-width: 760px) {
+  .topbar { flex-direction: column; }
+  nav { justify-content: center; gap: 12px 18px; }
+  .hero { padding: 55px 18px; }
+  .grid { grid-template-columns: 1fr; }
+  .container { width: 92%; margin: 30px auto; }
+  .section-title h2 { font-size: 25px; }
+}
 </style>
 </head>
 <body>
-<header>
-<h1>Online Earning Guide</h1>
-<p>Learn Skills. Work Online. Build Your Future.</p>
+
+<header class="topbar">
+  <a class="logo" href="#home">Online<span>Guide</span></a>
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#guides">Guides</a>
+    <a href="#safety">Safety</a>
+  </nav>
 </header>
-<nav>
-<a href="#home">Home</a>
-<a href="#skills">Skills</a>
-<a href="#freelancing">Freelancing</a>
-<a href="#safety">Safety</a>
-</nav>
-<main id="home">
-<div class="card">
-<h2>Welcome!</h2>
-<p>Welcome to Online Earning Guide. Learn useful digital skills and discover ways to start your online journey.</p>
-</div>
-<div class="card" id="skills">
-<h2>1. Learn Digital Skills</h2>
-<p>Start with Canva design, video editing, writing, or basic website development. Practice regularly and build a portfolio.</p>
-</div>
-<div class="card" id="freelancing">
-<h2>2. Freelancing</h2>
-<p>Explore platforms such as Fiverr and Upwork. Create an honest profile, show your work, and never pay anyone who promises guaranteed jobs.</p>
-</div>
-<div class="card">
-<h2>3. YouTube and Content Creation</h2>
-<p>Learn thumbnail design, video editing, and useful content creation. Income is not guaranteed and may take time.</p>
-</div>
-<div class="card" id="safety">
-<h2>4. Online Safety</h2>
-<p>Never share your passwords or verification codes. Avoid websites that demand deposits and promise guaranteed profits.</p>
-</div>
+
+<main>
+<section class="hero" id="home">
+  <span class="tag">YOUR ONLINE LEARNING STARTS HERE</span>
+  <h1>Learn Skills. Create Opportunities.</h1>
+  <p>Explore digital skills, discover freelancing basics and take your first steps towards an online career.</p>
+  <a class="btn primary" href="#guides">Explore Guides ↓</a>
+  <a class="btn" href="#skills">Discover Skills</a>
+</section>
+
+<section class="container">
+  <div class="welcome">
+    <h2>Welcome to Online Earning Guide!</h2>
+    <p>Want to learn something useful online? Start here. Our beginner-friendly guides introduce digital skills, creative work and safer ways to explore online opportunities.</p>
+  </div>
+</section>
+
+<section class="container" id="skills">
+  <div class="section-title">
+    <h2>Explore Digital Skills</h2>
+    <p>Choose a skill and start learning at your own pace.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">🎨</div>
+      <h3>Canva Design</h3>
+      <p>Learn to create social media posts, posters and simple graphic designs.</p>
+      <a href="#guides">Start exploring →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🖼️</div>
+      <h3>YouTube Thumbnails</h3>
+      <p>Explore thumbnail layout, readable text, contrast and attractive designs.</p>
+      <a href="#guides">Start exploring →</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🎬</div>
+      <h3>Video Editing</h3>
+      <p>Learn the basics of cutting clips, adding captions and improving videos.</p>
+      <a href="#guides">Start exploring →</a>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="guides">
+  <div class="section-title">
+    <h2>Beginner Guides</h2>
+    <p>Simple steps to help you build your knowledge.</p>
+  </div>
+  <div class="grid">
+    <article class="card">
+      <div class="emoji">💻</div>
+      <h3>Freelancing Basics</h3>
+      <p>Understand portfolios, client communication and how freelance platforms work.</p>
+      <a href="https://www.fiverr.com/" target="_blank" rel="noopener noreferrer">Explore Fiverr ↗</a>
+    </article>
+    <article class="card">
+      <div class="emoji">📚</div>
+      <h3>Build Your Portfolio</h3>
+      <p>Create practice projects that demonstrate your skills before looking for clients.</p>
+      <a href="#safety">Read our tips ↓</a>
+    </article>
+    <article class="card">
+      <div class="emoji">🌱</div>
+      <h3>Keep Improving</h3>
+      <p>Practise regularly, learn from feedback and focus on providing real value.</p>
+      <a href="#skills">Explore skills ↑</a>
+    </article>
+  </div>
+</section>
+
+<section class="container" id="safety">
+  <div class="notice">
+    <h2>🛡️ Stay Safe Online</h2>
+    <ul>
+      <li>Never share passwords, banking PINs or verification codes.</li>
+      <li>Avoid schemes that promise guaranteed income or unusually high returns.</li>
+      <li>Research a platform before paying any fees.</li>
+      <li>Never pay a stranger to unlock supposed earnings or withdrawals.</li>
+      <li>Remember: online work takes time, effort and practice. Income is not guaranteed.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="container">
+  <div class="section-title">
+    <h2>Your Journey Starts Today</h2>
+    <p>Choose one skill, practise it and keep building.</p>
+    <a class="btn primary" href="#skills">Choose a Skill ↑</a>
+  </div>
+</section>
 </main>
+
 <footer>
-<p>Online Earning Guide | Learn and Grow</p>
+  <h3>Online Earning Guide</h3>
+  <p>Learn • Create • Grow</p>
+  <p>Educational information for online beginners.</p>
+  <p>© 2026 Online Earning Guide</p>
 </footer>
+
 </body>
 </html>
